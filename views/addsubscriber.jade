@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	h1 Subscribe Now
+	form(name='addsubsciber' , method='post' , post='/addsubscriber')
+		div
+			input#inputEmail(type='text' , placeholder='Add Email' , name='email')
+		div
+			input#inputFirstName(type='text', placeholder='Add first Name' name='first_name')
+		div
+			input#inputLastName(type='text', placeholder='Add last Name' name='last_name')
+
+		div
+			button#btnSubmit(type='submit')	Submit	 

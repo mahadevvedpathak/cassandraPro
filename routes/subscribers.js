@@ -4,7 +4,7 @@ var cassandra = require('cassandra-driver');
 
 var client = new cassandra.Client({contactPoints : ['127.0.0.1']});
 client.connect(function(err,result){
-	console.log('index : cassandra connected');
+	console.log('subscribers : cassandra connected');
 });
 
 getSubsciberByid = "select * from people.subscribers WHERE id = ?";
@@ -25,6 +25,7 @@ router.get('/:id', function(req, res, next) {
  		})
  	}
  })
+ 
 });
 
 module.exports = router;

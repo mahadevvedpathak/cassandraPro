@@ -3,6 +3,8 @@ extends layout
 block content
 	h1 Subscribers
 	ul
-	each subscriber , i in subscribers
-		li 
-			a(href="/subscribers/#{subscriber.id}") #{subscriber.email}
+		each subscriber , i in subscribers
+			li 
+				a(href="/subscribers/#{subscriber.id}") #{subscriber.email}
+
+	a(href='/addsubscriber') Add subscriber
