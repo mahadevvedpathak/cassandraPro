@@ -37,9 +37,8 @@ router.delete('/:id' , function (req,res) {
 			console.log("err:",err);
 			res.status(404).send({msg:err})
 		}else{
-			console.log(result);
 			res.json(result);
-			//res.render('subscribers');
+			
 		}
 	});
 });

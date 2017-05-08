@@ -6,3 +6,27 @@ body {
 a {
   color: #00B7FF;
 }
+
+.container{
+	width: 800px;
+	margin: auto;
+	overflow: auto;
+	border: #cc solid 1px;
+}
+
+header{
+	background: #f4f4f4;
+	padding: 20px;
+}
+
+input{
+margin-bottom: 10px;
+}
+
+input[tupe="text"]{
+	height: 23px;
+	width: 220px;
+	border: #ccc solid 1px;
+	border-radius: 5px;
+	padding: 3px;
+}
