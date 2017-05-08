@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	h1 Update subscriber
+	form(name='editsubsciber' , method='post' , post='/editsubscriber')
+		div
+			input#inputEmail(type='text' , placeholder='Add Email' , name='email' value='#{email}')
+		div
+			input#inputFirstName(type='text', placeholder='Add first Name' name='first_name' value='#{first_name}')
+		div
+			input#inputLastName(type='text', placeholder='Add last Name' name='last_name' value='#{last_name}')
+
+			input#inputLastName(type='hidden', placeholder='id' name='id' value='#{id}')
+
+		div
+			button#btnSubmit(type='submit')	Submit	 
