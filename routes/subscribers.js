@@ -13,6 +13,7 @@ getSubsciberByid = "select * from people.subscribers WHERE id = ?";
 router.get('/:id', function(req, res, next) {
  client.execute(getSubsciberByid,[req.params.id],function(err,result){
  	if(err){
+ 		//console.log(err);
  		res.status(404).send({msg:err})
  	}
  	else{
@@ -26,6 +27,21 @@ router.get('/:id', function(req, res, next) {
  	}
  })
  
+});
+
+router.delete('/:id' , function (req,res) {
+	var deleteSubscriber = "DELETE FROM people.subscribers Where id = ?";
+	console.log("deleteSubscriber:",deleteSubscriber);
+	client.execute(deleteSubscriber,[req.params.id] , function (err, result) {
+		if(err){
+			console.log("err:",err);
+			res.status(404).send({msg:err})
+		}else{
+			console.log(result);
+			res.json(result);
+			//res.render('subscribers');
+		}
+	});
 });
 
 module.exports = router;
